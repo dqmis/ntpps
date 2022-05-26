@@ -1,0 +1,32 @@
+repos:
+- repo: https://github.com/ambv/black
+  rev: 22.1.0
+  hooks:
+  - id: black
+- repo: https://github.com/pycqa/isort
+  rev: 5.10.1
+  hooks:
+  - id: isort
+- repo: https://github.com/asottile/pyupgrade
+  rev: v2.31.0
+  hooks:
+  - id: pyupgrade
+- repo: https://github.com/pycqa/pylint
+  rev: v2.12.2
+  hooks:
+  - id: pylint
+- repo: https://github.com/pre-commit/mirrors-mypy
+  rev: v0.770
+  hooks:
+  - id: mypy
+- repo: https://github.com/nbQA-dev/nbQA
+  rev: 1.2.3
+  hooks:
+    - id: nbqa-black
+    - id: nbqa-isort
+    - id: nbqa-pylint
+      additional_dependencies: [-r, requirements-dev.txt]
+    - id: nbqa-pyupgrade
+      args: [--py37-plus]
+default_language_version:
+    python: python3

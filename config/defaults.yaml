@@ -1,0 +1,41 @@
+seed: 0
+verbose: False
+train_size: 16
+val_size: 16
+test_size: 16
+marks: 2
+window: 100
+mu: [0.05, 0.05]
+alpha: [0.1, 0.2, 0.2, 0.1]
+beta: [1.0, 1.0, 1.0, 1.0] 
+
+model_type: diffeq
+#scale: 3.85802469e-7
+scale: 0.1
+load_from_dir: "hawkes"
+raw_data_dir: "./data/raw"
+data_dir: "./data/"
+batch_size: 2
+patience: 1
+#dt: 3e-2
+dt: 0.1
+train_epochs: 1
+
+stack_test_size: 0.2
+stack_train_size: 0.7
+stack_val_size: 0.1
+
+save_dir: "./data/stack_overflow"
+
+
+
+dim_c: 10
+dim_h: 10
+dim_N: 2
+jump_type: read
+weight_decay: 1e-5
+lr: 1e-3
+adam_lr: 1.0e-2
+dim_hidden: 32
+num_hidden: 2
+ortho: True

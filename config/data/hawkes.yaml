@@ -1,0 +1,9 @@
+train_size: 16384
+val_size: 4096
+test_size: 4096
+mu: [0.05, 0.05]
+alpha: [0.1, 0.2, 0.2, 0.1]
+beta: [1.0, 1.0, 1.0, 1.0] 
+verbose: true
+marks: 2
+window: 100

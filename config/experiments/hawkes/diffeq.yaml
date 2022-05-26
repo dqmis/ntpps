@@ -1,0 +1,12 @@
+model_type: diffeq
+seed: 0
+verbose: False
+scale: 1
+load_from_dir: "hawkes"
+batch_size: 30
+dt: 0.5
+train_epochs: 10
+dim_c: 3
+dim_h: 2
+dim_N: 2
+jump_type: read

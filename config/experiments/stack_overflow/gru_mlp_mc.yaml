@@ -1,0 +1,33 @@
+batch_size: 32
+device: cpu
+encoder_decoder_args:
+  decoder: mlp-mc
+  decoder_dropout_rnn: 0.0
+  decoder_emb_dim: 32
+  decoder_encoding: learnable
+  decoder_layers_rnn: 1
+  decoder_time_encoding: relative
+  decoder_units_mlp: [64, 32]
+  encoder: gru
+  encoder_activation_final_mlp: relu
+  encoder_dropout_rnn: 0.0
+  encoder_emb_dim: 32
+  encoder_encoding: learnable_with_labels
+  encoder_layers_rnn: 1
+  encoder_time_encoding: absolute
+  encoder_units_mlp: []
+  encoder_units_rnn: 32
+include_poisson: true
+load_from_dir: stack_overflow
+lr_poisson_rate_init: 0.01
+lr_rate_init: 0.01
+marks: 22
+model_type: ntpp
+multi_labels: false
+optimizer_args: {lr_scheduler: noam, lr_scheduler_warmup: 10}
+patience: 100
+save_model_freq: 100
+seed: 42
+time_scale: 1.0e-05
+train_epochs: 1001
+use_coefficients: true

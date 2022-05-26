@@ -1,0 +1,12 @@
+model_type: diffeq
+seed: 0
+verbose: False
+scale: 3.858024691358025e-07
+load_from_dir: vinted
+batch_size: 30
+dt: 3.333333333333333e-02
+train_epochs: 8
+dim_c: 10
+dim_h: 10
+dim_N: 4
+jump_type: read

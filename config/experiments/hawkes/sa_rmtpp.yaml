@@ -1,0 +1,32 @@
+batch_size: 512
+device: cpu
+encoder_decoder_args:
+  decoder: rmtpp
+  decoder_dropout_rnn: 0.0
+  decoder_emb_dim: 8
+  decoder_encoding: learnable
+  decoder_layers_rnn: 1
+  decoder_units_mlp: [8]
+  decoder_units_rnn: 8
+  encoder: selfattention
+  encoder_activation_final_mlp: relu
+  encoder_attn_activation: softmax
+  encoder_dropout_rnn: 0.0
+  encoder_emb_dim: 8
+  encoder_encoding: learnable_with_labels
+  encoder_layers_rnn: 1
+  encoder_units_mlp: [8]
+  encoder_units_rnn: 8
+include_poisson: false
+load_from_dir: hawkes
+lr_poisson_rate_init: 0.01
+lr_rate_init: 0.01
+marks: 2
+model_type: ntpp
+multi_labels: false
+optimizer_args: {lr_scheduler: noam, lr_scheduler_warmup: 10}
+patience: 100
+seed: 42
+time_scale: 1.0
+train_epochs: 501
+use_coefficients: true

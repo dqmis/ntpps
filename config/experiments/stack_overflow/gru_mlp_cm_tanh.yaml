@@ -1,0 +1,37 @@
+batch_size: 32
+device: cpu
+encoder_decoder_args:
+  decoder: mlp-cm
+  decoder_activation_final_mlp: softplus
+  decoder_activation_mlp: tanh
+  decoder_activation_rnn: tanh
+  decoder_constraint_mlp: nonneg
+  decoder_constraint_rnn: nonneg
+  decoder_do_zero_subtraction: false
+  decoder_dropout_rnn: 0.0
+  decoder_emb_dim: 8
+  decoder_embedding_constraint: nonneg
+  decoder_encoding: times_only
+  decoder_layers_rnn: 1
+  decoder_units_mlp: [64, 64]
+  encoder: gru
+  encoder_activation_final_mlp: relu
+  encoder_dropout_rnn: 0.0
+  encoder_emb_dim: 8
+  encoder_encoding: concatenate
+  encoder_layers_rnn: 1
+  encoder_units_mlp: [64]
+  encoder_units_rnn: 64
+include_poisson: true
+load_from_dir: stack_overflow
+lr_poisson_rate_init: 0.01
+lr_rate_init: 0.01
+marks: 22
+model_type: ntpp
+multi_labels: false
+optimizer_args: {lr_scheduler: noam, lr_scheduler_warmup: 10}
+patience: 500
+seed: 42
+time_scale: 1.0e-05
+train_epochs: 501
+use_coefficients: true
