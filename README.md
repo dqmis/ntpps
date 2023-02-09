@@ -2,7 +2,7 @@
 We present in this repository code to train, evaluate Neural Temporal Point Processes (TPPs), as described in our work: "Challenges and opportunities in applying Neural Point Processes to large scale industry data"
 
 ## Contact
-* Dominykas Šeputis dominykas.seputis@mif.stud.vu.lt
+* Dominykas Šeputis dom.seputis@gmail.com
 
 ## Data
 We use three datasets:
